@@ -130,7 +130,7 @@ void init(GLFWwindow* window) {
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 }
 
-// Precíz kör–téglalap ütközés
+// Kör–téglalap ütközés
 bool checkCircleRectCollision(float cx, float cy, float r,
     float rectX, float rectY, float halfWidth, float halfHeight)
 {
@@ -212,7 +212,7 @@ void display(GLFWwindow* window) {
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
-// Cleanup
+
 void cleanUpScene() {
     glDeleteProgram(programCircle);
     glDeleteProgram(programLine);
@@ -220,7 +220,7 @@ void cleanUpScene() {
     glDeleteVertexArrays(numVAOs, vao);
 }
 
-// Main
+
 int main() {
     if (!glfwInit()) return -1;
 
